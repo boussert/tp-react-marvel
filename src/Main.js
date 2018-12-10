@@ -34,7 +34,7 @@ class Main extends Component {
         <SuperheroElement />
         {this.getAllHeroes()}
         {this.state.listCharac.map((charac, index) =>(
-          <td>{charac.name}</td>
+          <img src={charac.thumbnail.path + '.' + charac.thumbnail.extension} alt={charac.name}/>
         ))}
       </div>
       

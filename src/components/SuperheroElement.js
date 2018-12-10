@@ -7,17 +7,17 @@ class SuperheroElement extends Component {
   render() {
 
     return (
-      <div class="ui card">
-        <div class="image">
-          <img src="../hulk.jpg" />
+      <div className="ui card">
+        <div className="image">
+          <img src="https://fsmedia.imgix.net/67/9f/12/f7/dfb0/4f50/b313/824e861ed92f/the-hulk-thanos.jpeg?rect=0%2C7%2C780%2C390&dpr=2&auto=format%2Ccompress&w=650" />
         </div>
 
-        <div class="content">
-          <a class="header">Hulk</a>
+        <div className="content">
+          <a className="header">Hulk</a>
         </div>
 
-        <div class="extra content">
-          <button><Link to="/hero/:name" replace >Voir le détail</Link></button>
+        <div className="extra content">
+          <button><Link to="/hero/$250" replace >Voir le détail</Link></button>
         </div>
 
       </div>

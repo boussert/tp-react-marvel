@@ -8,11 +8,11 @@ class SuperheroDetail extends Component {
     return (
       <div>
 
-        <div class="ui grid">
-          <div class="eight wide column">
-              <img class="ui small circular image" src="../hulk.jpg" />
+        <div className="ui grid">
+          <div className="eight wide column">
+              <img className="ui medium circular image" src="https://fsmedia.imgix.net/67/9f/12/f7/dfb0/4f50/b313/824e861ed92f/the-hulk-thanos.jpeg?rect=0%2C7%2C780%2C390&dpr=2&auto=format%2Ccompress&w=650" />
           </div>
-          <div class="eight wide column">
+          <div className="eight wide column">
             <h1>Hulk</h1>
 
             <p>Détail de Hulk ici</p>
@@ -21,16 +21,16 @@ class SuperheroDetail extends Component {
 
 
           <h2>Apparition dans les comics : </h2>
-            <div class="ui four cards">
-              <div class="card">
-                <div class="image">
-            <img src="/comic1.png" />
+            <div className="ui four cards">
+              <div className="card">
+                <div className="image">
+            <img src="https://imgix.ranker.com/user_node_img/50073/1001456640/original/always-on-my-mind-photo-u1?w=650&q=50&fm=jpg&fit=crop&crop=faces" />
                 </div>
               </div>
 
-              <div class="card">
-                <div class="image">
-            <img src="/comic2.png" />
+              <div className="card">
+                <div className="image">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/553797/553797._SX360_QL80_TTD_.jpg" />
                 </div>
               </div>
 

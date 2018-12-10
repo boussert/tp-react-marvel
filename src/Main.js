@@ -7,10 +7,10 @@ class Main extends Component {
   render() {
     return (
       <div className="Main">
-        
-        <div class="ui search">
-          <input class="prompt" type="text" placeholder="Rechercher..." onChange={ this.search } />
-          <div class="results"></div>
+
+        <div className="ui search">
+          <input className="prompt" type="text" placeholder="Rechercher..." onChange={ this.search } />
+          <div className="results"></div>
         </div>
 
         <SuperheroElement />

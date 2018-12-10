@@ -4,15 +4,17 @@ import './index.css';
 import Main from './Main';
 import SuperheroDetail from './components/SuperheroDetail';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 
 
 const App = () => (
   <BrowserRouter>
     <div>
-       <Route path="/" component={Main} />
-       <Route path="/hero/:name" component={SuperheroDetail} />
+      <Switch>
+       <Route exact path="/" component={Main} />
+       <Route path="/hero/:name" component={SuperheroDetail}/>
+       </Switch>
     </div>
   </BrowserRouter>
 );

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './Main.css';
-import SuperheroElement from './components/SuperheroElement';
+import SuperHeroList from './components/SuperHeroList';
 
 class Main extends Component {
 
@@ -33,13 +33,9 @@ class Main extends Component {
 
 
         {this.getAllHeroes()}
-        {this.state.listCharac.map((charac, index) =>(
-          <SuperheroElement
-                id={charac.id}
-                image={charac.thumbnail.path+'.'+charac.thumbnail.extension}
-                nom={charac.name}
-              />
-        ))}
+        <SuperHeroList
+        list = {this.state.listCharac}
+        />
       </div>
 
     );

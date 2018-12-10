@@ -4,6 +4,17 @@ import { Link } from 'react-router-dom'
 
 class SuperheroDetail extends Component {
 
+  // componentDidMount () {
+  //   const { handle } = this.props.match.params
+  //
+  //   fetch(process.env.REACT_APP_API_URL + '/v1/public/characters/{}' + '?apikey=' + process.env.REACT_APP_PUBLIC_KEY).then(responseJson =>
+  //      responseJson.json()
+  // ).then(json => this.setState({
+  //     listCharac: json.data.results
+  //   })
+  // );
+  // }
+
   render() {
     return (
       <div>
@@ -14,6 +25,7 @@ class SuperheroDetail extends Component {
           </div>
           <div className="eight wide column">
             <h1>Hulk</h1>
+            <h2>{this.props.match.params.id}</h2>
 
             <p>Détail de Hulk ici</p>
           </div>

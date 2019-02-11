@@ -42,7 +42,11 @@ class SuperheroDetail extends Component {
           </div>
         </div>
 
-          <h2>Apparition dans les comics : </h2>
+        <h4 class="ui horizontal divider header">
+        <i class="book icon"></i>
+        Apparition dans les comics :
+        </h4>
+
           <div className="cards-flex">
           <ComicList
             list = {this.state.character.comics.items}

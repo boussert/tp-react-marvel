@@ -31,15 +31,13 @@ class ComicElement extends Component {
 
           return (
             <div className="ui card card-flex">
+           
                 {this.state.comic.images.length > 0 &&
                     <div className="image">            
                         <img src={this.state.comic.images[0].path+'.'+this.state.comic.images[0].extension} />
+                        <a class="ui green ribbon label">{this.props.name}</a>
                      </div>  
                  }                
-
-                <div className="content">
-                    <a className="header">{this.props.name}</a>
-                </div>
             </div>
         );
     }

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './Main.css';
+import BottomScrollListener from 'react-bottom-scroll-listener';
 import SuperHeroList from './components/SuperHeroList';
 
 class Main extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { listCharac: []
+    this.state = { listCharac: [],
+      offset:0
     };
   }
 
@@ -15,16 +17,21 @@ class Main extends Component {
   }
 
   getAllHeroes() {
-    fetch(process.env.REACT_APP_API_URL + '/v1/public/characters' + '?apikey=' + process.env.REACT_APP_PUBLIC_KEY).then(responseJson =>
+    fetch(process.env.REACT_APP_API_URL + '/v1/public/characters' + '?apikey=' + process.env.REACT_APP_PUBLIC_KEY + "&offset=" + this.state.offset).then(responseJson =>
        responseJson.json()
   ).then(json =>
     this.setState({
-      listCharac: json.data.results
+      listCharac: this.state.listCharac ? this.state.listCharac.concat(json.data.results) : json.data.results
     })
   );
   }
 
-
+  loadMore() {
+    this.setState({
+      offset: this.state.offset + 20
+    })
+    this.getAllHeroes();
+  }
 
   render() {
     return (
@@ -42,9 +49,8 @@ class Main extends Component {
         />
         </div>
 
-
-    <div aria-label="Pagination Navigation" role="navigation" class="ui pagination menu"><a aria-current="false" aria-disabled="false" tabindex="0" value="1" aria-label="Previous item" type="prevItem" class="item">⟨</a><a aria-current="true" aria-disabled="false" tabindex="0" value="1" type="pageItem" class="active item">1</a><a aria-current="false" aria-disabled="false" tabindex="0" value="2" type="pageItem" class="item">2</a><a aria-current="false" aria-disabled="false" tabindex="0" value="3" type="pageItem" class="item">3</a><a aria-current="false" aria-disabled="false" tabindex="0" value="2" aria-label="Next item" type="nextItem" class="item">⟩</a></div>
-    </div>
+      <BottomScrollListener onBottom={() => this.loadMore()} />
+     </div>
 
     );
   }

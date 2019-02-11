@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../Main.css';
+import '../../Main.css';
 import { Link } from 'react-router-dom'
 
 function SuperheroElement(props) {

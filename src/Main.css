@@ -10,7 +10,7 @@
 
 /* DETAIL */
 .h1-detail-hero {
-  margin-top: 3rem;
+  margin-top: 3rem !important;
 }
 
 /* SEARCHBAR */
@@ -29,4 +29,9 @@
 /* MAIN */
 .Main {
   text-align: center;
+}
+
+div#root {
+  margin-left: 1rem;
+  margin-top: 1rem;
 }

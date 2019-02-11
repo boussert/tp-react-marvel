@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Main.css';
+import '../../Main.css';
 import SuperheroElement from './SuperheroElement';
 
 function SuperheroList(props) {

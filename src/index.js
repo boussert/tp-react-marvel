@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Main from './Main';
-import SuperheroDetail from './components/SuperheroDetail';
+import SuperheroDetail from './components/Superhero/SuperheroDetail';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';

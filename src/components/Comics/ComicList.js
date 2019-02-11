@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Main.css';
+import '../../Main.css';
 import ComicElement from './ComicElement';
 
 function ComicList(props) {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../Main.css';
+import '../../Main.css';
 
 class ComicElement extends Component {
 

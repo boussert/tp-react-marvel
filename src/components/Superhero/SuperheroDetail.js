@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import '../Main.css';
-import ComicList from './ComicList';
+import '../../Main.css';
+import ComicList from '../Comics/ComicList';
 
 class SuperheroDetail extends Component {
 

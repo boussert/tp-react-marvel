@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Main.css';
 import BottomScrollListener from 'react-bottom-scroll-listener';
-import SuperHeroList from './components/SuperHeroList';
+import SuperHeroList from './components/Superhero/SuperHeroList';
 
 class Main extends Component {
 

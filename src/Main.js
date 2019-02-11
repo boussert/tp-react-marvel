@@ -8,19 +8,23 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        listCharac: [],
         offset:0,
-        filteredListCharac: [],
+        listCharac: [],
         query: '',
         isSearchActive: false  
     };
   }
 
   handleInputChange = () => {
-    if (this.search.value == undefined || this.search.value == "") {
+    var emptyList = [];
+    if (this.search.value === undefined || this.search.value === "") {
       this.setState({
-        filteredListCharac: this.state.listCharac,
-        isSearchActive: false
+        isSearchActive: false,
+        offset: 0,
+        query: this.search.value,
+        listCharac: emptyList
+      }, () => {        
+        this.getAllHeroes();
       })
     } else {
       this.setState({
@@ -30,7 +34,6 @@ class Main extends Component {
         this.getHeroesByQuery();
       }) 
     }
-    
   }
 
   componentDidMount() {
@@ -42,7 +45,7 @@ class Main extends Component {
       responseJson.json()
  ).then(json => 
   this.setState({
-    filteredListCharac: json.data.results
+    listCharac: json.data.results
   })
   )
 }
@@ -52,14 +55,13 @@ class Main extends Component {
        responseJson.json()
   ).then(json =>
     this.setState({
-            listCharac: this.state.listCharac ? this.state.listCharac.concat(json.data.results) : json.data.results,
-            filteredListCharac: this.state.filteredListCharac ? this.state.filteredListCharac.concat(json.data.results) : json.data.results
+            listCharac: this.state.listCharac ? this.state.listCharac.concat(json.data.results) : json.data.results
     })
   );
   }
 
   loadMore() {
-    if (this.state.isSearchActive == false) {
+    if (this.state.isSearchActive === false) {
         this.getAllHeroes();
 
         this.setState({
@@ -71,7 +73,7 @@ class Main extends Component {
 
   render() {
     var queryHasResults;
-    if(this.state.filteredListCharac.length == 0) {
+    if(this.state.listCharac.length === 0) {
       queryHasResults = false;
     } else {
       queryHasResults = true;
@@ -93,7 +95,7 @@ class Main extends Component {
 
         <div className="cards-flex">
         <SuperHeroList
-        list = {this.state.filteredListCharac}
+        list = {this.state.listCharac}
         />
         </div>
         

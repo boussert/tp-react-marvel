@@ -1,7 +1,4 @@
-.Main {
-  text-align: center;
-}
-
+/* CARDS */
 .cards-flex {
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +9,7 @@
   margin: 1rem !important;
 }
 
+/* SEARCHBAR */
 .searchbar {
   margin-bottom: 2rem;
 }
@@ -20,31 +18,11 @@
   width: 40rem;
 }
 
-.Main-logo {
-  animation: Main-logo-spin infinite 20s linear;
-  height: 40vmin;
+.no-results {
+  margin-bottom: 3rem;
 }
 
-.Main-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.Main-link {
-  color: #61dafb;
-}
-
-@keyframes Main-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* MAIN */
+.Main {
+  text-align: center;
 }

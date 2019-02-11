@@ -15,7 +15,7 @@ function SuperheroElement(props) {
         </div>
 
         <div className="extra content">
-          <button><Link to={`/hero/${ props.id }`} replace >Voir le détail</Link></button>
+          <button><Link to={`/hero/${ props.charac.id }`} replace >Voir le détail</Link></button>
         </div>
       </div>
     );

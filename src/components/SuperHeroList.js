@@ -7,11 +7,11 @@ function SuperheroList(props) {
         return (
             props.list.map((charac, index) =>(
               <SuperheroElement
-                    id={charac.id}
+                    charac={charac}
                     image={charac.thumbnail.path+'.'+charac.thumbnail.extension}
                     nom={charac.name}
                   />
-            ))   
+            ))
         );
 }
 

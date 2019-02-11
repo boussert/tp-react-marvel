@@ -1,32 +1,46 @@
+/* DETAIL */
+.h1-detail-hero {
+  margin-top: 3rem !important;
+}
+
+.character-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SEARCHBAR */
+.searchbar {
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 40rem;
+}
+
+.no-results {
+  margin-bottom: 3rem;
+}
+
+/* MAIN */
 .Main {
   text-align: center;
 }
 
-.Main-logo {
-  animation: Main-logo-spin infinite 20s linear;
-  height: 40vmin;
+div#root {
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
-.Main-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* CARDS */
+.cards-flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.Main-link {
-  color: #61dafb;
+.card-flex {
+  margin: 1rem !important;
 }
 
-@keyframes Main-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+

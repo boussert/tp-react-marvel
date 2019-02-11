@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
-import '../Main.css';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import '../../Main.css';
 import SuperheroElement from './SuperheroElement';
 
 function SuperheroList(props) {
         return (
-            props.list.map((charac, index) =>(
+            props.list.map((charac, index) =>(              
               <SuperheroElement
-                    id={charac.id}
+                    charac={charac}
                     image={charac.thumbnail.path+'.'+charac.thumbnail.extension}
                     nom={charac.name}
-                  />
-            ))   
+                  />              
+            ))
         );
 }
 

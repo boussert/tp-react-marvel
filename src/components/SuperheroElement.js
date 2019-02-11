@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function SuperheroElement(props) {
 
     return (
-      <div className="ui card">
+      <div className="ui card card-flex">
         <div className="image">
           <img src={props.image} />
         </div>

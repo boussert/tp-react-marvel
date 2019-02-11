@@ -2,6 +2,24 @@
   text-align: center;
 }
 
+.cards-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-flex {
+  margin: 1rem !important;
+}
+
+.searchbar {
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 40rem;
+}
+
 .Main-logo {
   animation: Main-logo-spin infinite 20s linear;
   height: 40vmin;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './Main.css';
 import SuperHeroList from './components/SuperHeroList';
 
@@ -30,16 +29,18 @@ class Main extends Component {
   render() {
     return (
       <div className="Main">
+        <img src={ require('./assets/logo-marvel-header.png') } height="250"/>
 
-        <h1 class="ui header">Marvel superheroes</h1>
-        <div className="ui search">
-          <input className="prompt" type="text" placeholder="Rechercher..." onChange={ this.search } />
+        <div className="ui search searchbar">
+          <input className="prompt search-input" type="text" placeholder="Rechercher..." onChange={ this.search } />
           <div className="results"></div>
         </div>
 
+        <div className="cards-flex">
         <SuperHeroList
         list = {this.state.listCharac}
         />
+        </div>
 
 
     <div aria-label="Pagination Navigation" role="navigation" class="ui pagination menu"><a aria-current="false" aria-disabled="false" tabindex="0" value="1" aria-label="Previous item" type="prevItem" class="item">⟨</a><a aria-current="true" aria-disabled="false" tabindex="0" value="1" type="pageItem" class="active item">1</a><a aria-current="false" aria-disabled="false" tabindex="0" value="2" type="pageItem" class="item">2</a><a aria-current="false" aria-disabled="false" tabindex="0" value="3" type="pageItem" class="item">3</a><a aria-current="false" aria-disabled="false" tabindex="0" value="2" aria-label="Next item" type="nextItem" class="item">⟩</a></div>

@@ -2,11 +2,15 @@
 .cards-flex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .card-flex {
   margin: 1rem !important;
+}
+
+/* DETAIL */
+.h1-detail-hero {
+  margin-top: 3rem;
 }
 
 /* SEARCHBAR */

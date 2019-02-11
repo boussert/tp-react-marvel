@@ -11,6 +11,10 @@ class Main extends Component {
     };
   }
 
+  componentDidMount() {
+    this.getAllHeroes();
+  }
+
   getAllHeroes() {
     fetch(process.env.REACT_APP_API_URL + '/v1/public/characters' + '?apikey=' + process.env.REACT_APP_PUBLIC_KEY).then(responseJson =>
        responseJson.json()
@@ -31,8 +35,6 @@ class Main extends Component {
           <div className="results"></div>
         </div>
 
-
-        {this.getAllHeroes()}
         <SuperHeroList
         list = {this.state.listCharac}
         />

@@ -41,7 +41,7 @@ class Main extends Component {
   }
 
   getHeroesByQuery(){
-    fetch(process.env.REACT_APP_API_URL + '/v1/public/characters' + '?nameStartsWith=' + this.state.query + '&apikey=' + process.env.REACT_APP_PUBLIC_KEY + '&limit=30' ).then(responseJson =>
+    fetch(process.env.REACT_APP_API_URL + '/v1/public/characters?nameStartsWith=' + this.state.query + '&apikey=' + process.env.REACT_APP_PUBLIC_KEY + '&limit=30' ).then(responseJson =>
       responseJson.json()
  ).then(json => 
   this.setState({
@@ -51,7 +51,7 @@ class Main extends Component {
 }
 
   getAllHeroes() {
-    fetch(process.env.REACT_APP_API_URL + '/v1/public/characters' + '?apikey=' + process.env.REACT_APP_PUBLIC_KEY + "&offset=" + this.state.offset).then(responseJson =>
+    fetch(process.env.REACT_APP_API_URL + '/v1/public/characters?apikey=' + process.env.REACT_APP_PUBLIC_KEY + "&offset=" + this.state.offset).then(responseJson =>
        responseJson.json()
   ).then(json =>
     this.setState({
@@ -81,7 +81,7 @@ class Main extends Component {
 
     return (
       <div className="Main">
-        <img src={ require('./assets/logo-marvel-header.png') } height="250"/>
+        <img alt="Logo marvel" src={ require('./assets/logo-marvel-header.png') } height="250"/>
 
         <div className="ui search searchbar">
           <input 
@@ -99,7 +99,7 @@ class Main extends Component {
         />
         </div>
         
-        {queryHasResults == false &&
+        {queryHasResults === false &&
           <div className="no-results">
             <p>Aucun résultat trouvé</p>
           </div>

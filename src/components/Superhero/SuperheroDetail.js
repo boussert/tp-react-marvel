@@ -27,14 +27,14 @@ class SuperheroDetail extends Component {
         return <div />
       }
 
-
     return (
       <div>
 
         <div className="ui grid">
           <div className="six wide column">
-              <img className="ui medium circular image" src={this.state.character.thumbnail.path+'.'+this.state.character.thumbnail.extension}></img>
+              <img alt="Illustration du superhéros" className="ui medium circular image character-image" src={this.state.character.thumbnail.path+'.'+this.state.character.thumbnail.extension}></img>
           </div>
+
           <div className="ten wide column">
             <h1 className="h1-detail-hero">{this.state.character.name}</h1>
 
@@ -52,11 +52,6 @@ class SuperheroDetail extends Component {
             list = {this.state.character.comics.items}
           />
         </div>
-        
-
-
-
-
       </div>
     );
   }

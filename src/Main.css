@@ -1,16 +1,12 @@
-/* CARDS */
-.cards-flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card-flex {
-  margin: 1rem !important;
-}
-
 /* DETAIL */
 .h1-detail-hero {
   margin-top: 3rem !important;
+}
+
+.character-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* SEARCHBAR */
@@ -35,3 +31,16 @@ div#root {
   margin-left: 1rem;
   margin-top: 1rem;
 }
+
+/* CARDS */
+.cards-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-flex {
+  margin: 1rem !important;
+}
+
+
+

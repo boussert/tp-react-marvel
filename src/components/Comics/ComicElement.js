@@ -10,8 +10,7 @@ class ComicElement extends Component {
           };
       }
 
-      componentDidMount() { // willMount pour passer avant le render ?
-
+      componentDidMount() {
         fetch(this.props.resource+ '?apikey=' + process.env.REACT_APP_PUBLIC_KEY).then(responseJson =>
            responseJson.json()
          ).then(json => {
@@ -24,7 +23,6 @@ class ComicElement extends Component {
 
      render() {
         // Chargement des données
-        // <img src={this.state.comic.image} />
           if(!this.state.comic) {
             return <div />
           }
@@ -34,7 +32,7 @@ class ComicElement extends Component {
            
                 {this.state.comic.images.length > 0 &&
                     <div className="image">            
-                        <img src={this.state.comic.images[0].path+'.'+this.state.comic.images[0].extension} />
+                        <img alt="Première page du comic" src={this.state.comic.images[0].path+'.'+this.state.comic.images[0].extension} />
                         <a class="ui green ribbon label">{this.props.name}</a>
                      </div>  
                  }                

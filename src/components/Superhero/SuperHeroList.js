@@ -4,14 +4,12 @@ import SuperheroElement from './SuperheroElement';
 
 function SuperheroList(props) {
         return (
-            props.list.map((charac, index) =>(
-              
+            props.list.map((charac, index) =>(              
               <SuperheroElement
                     charac={charac}
                     image={charac.thumbnail.path+'.'+charac.thumbnail.extension}
                     nom={charac.name}
-                  />
-              
+                  />              
             ))
         );
 }

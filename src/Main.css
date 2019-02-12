@@ -3,6 +3,10 @@
   margin-top: 3rem !important;
 }
 
+.p-detail-hero {
+  text-align: justify;
+}
+
 .character-image {
   display: block;
   margin-left: auto;

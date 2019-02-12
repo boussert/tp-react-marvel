@@ -35,10 +35,10 @@ class SuperheroDetail extends Component {
               <img alt="Illustration du superhéros" className="ui medium circular image character-image" src={this.state.character.thumbnail.path+'.'+this.state.character.thumbnail.extension}></img>
           </div>
 
-          <div className="ten wide column">
+          <div className="six wide column">
             <h1 className="h1-detail-hero">{this.state.character.name}</h1>
-
-            <p>{this.state.character.description}</p>
+            <div class="ui divider"></div>
+            <p className="p-detail-hero">{this.state.character.description}</p>
           </div>
         </div>
 

@@ -2,6 +2,13 @@
 
 Ce projet  a été réalisé pour le cours de React, il présente une liste de super héros de l'API Marvel, ainsi que leurs comics correspondants, et une recherche fonctionnelle.
 
+<p align="center">
+  <img src="src/assets/screenshots/capture-accueil.png" width="600" height="300">
+</p>
+
+<p align="center">
+  <img src="src/assets/screenshots/capture-detail.png" width="600" height="300">
+</p>
 
 
 ## Available Scripts
